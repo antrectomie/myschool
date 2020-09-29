@@ -11,6 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 public class Teacher extends AbstractAuditable{
 
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_teacher_gen")
