@@ -23,5 +23,8 @@ public class MyschoolApplication implements CommandLineRunner {
 //        Thread.sleep(4000);
 //        Student st = new Student(null, "alin", "2345", Generation.FIRST_YEAR, null, null);
 //        studentService.saveStudent(StudentMapper.entityToDto(st, null));
+
     }
+
+
 }

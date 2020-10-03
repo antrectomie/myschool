@@ -16,13 +16,15 @@ import java.util.Set;
 @Entity
 public class Student extends AbstractAuditable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String birthYear;
     private Generation generation;
 
     @OneToOne(fetch = FetchType.LAZY)
+    @MapsId             //PK-ul din appUser va fi PK, FK in student
+    @JoinColumn(name = "id")
     private AppUser appUser;
 
     @ManyToOne

@@ -9,14 +9,14 @@ import ro.alin.myschool.model.Student;
 
 public class StudentMapper {
 
-    public static StudentDto entityToDto(Student student, AppUser appUser){
+    public static StudentDto entityToDto(Student student, Long userId){
         return
                 StudentDto.builder()
                         .id(student.getId())
                         .name(student.getName())
                         .birthYear(student.getBirthYear())
                         .generation(student.getGeneration())
-                        .userId(appUser != null ? appUser.getId() : null)
+                        .userId(userId)
                         .createBy(student.getCreatedBy())
                         .updateBy(student.getLastUpdateBy())
                         .createAt(student.getCreated())

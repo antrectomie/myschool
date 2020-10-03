@@ -20,7 +20,7 @@ public class StudentGradeBook {
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;
-   @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
 
